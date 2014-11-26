@@ -6,7 +6,7 @@ Ruby 2 or newer. That's all.
 
 ## Setup
 
-Just use `bundle install` and you're done.
+Just run `bundle install` and you're done.
 
 ## Usage
 
@@ -24,12 +24,12 @@ Mutant will tell you what the specs are missing.
 
 To keep things simple, just run Mutant for House#add_member:
 
-Run `bundle exec mutant --include lib --require house --use spec 'House#add_member'` in your terminal.
+`bundle exec mutant --include lib --require house --use spec 'House#add_member'`
 
 You should get an output like this:
 
 ~~~
- rspec:House#add_member
+rspec:House#add_member
 evil:House#add_member:/Users/david/Sites/MutantDemo/lib/house.rb:29:d3866
 @@ -1,5 +1,5 @@
  def add_member(member)
@@ -64,12 +64,12 @@ Coverage:           87.50%
 Expected:           100.00%
 ~~~
 
-Hmm, it's red and shows two mutations. What happend?
+Hmm, two mutations. What happend?
 
-Mutant replaced the return value `self` of House#add_member with `nil` and the specs passed. The specs even passed when the return value was removed.
+Mutant replaced the return value `self` of `House#add_member` with `nil` and the specs passed. They even passed when the return value was removed. That's bad.
 
 To fix it, we have to add a spec that asserts the return value of the method.
 
-Now it's your turn.
+Now it's your turn. Kill them with fire!
 
-You can jump to the solution by checking out the branch `add_member_kill_mutation`
+Just want the fixed spec? Check out the branch `add_member_kill_mutation`.
