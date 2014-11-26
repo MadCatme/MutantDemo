@@ -18,4 +18,8 @@ RSpec.describe House, '#add_member' do
     house.add_member(tyrion)
     expect(house.member('Tyrion')).to eql(tyrion)
   end
+
+  it 'should return house' do
+    expect(house.add_member(tyrion)).to be(house)
+  end
 end
