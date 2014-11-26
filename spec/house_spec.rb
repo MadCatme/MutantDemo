@@ -5,6 +5,21 @@ SimpleCov.start
 require 'rspec'
 require_relative '../lib/house'
 
+RSpec.describe House, '#initialize' do
+  subject(:house) do
+    House.new('Lannister')
+  end
+  
+  it 'should have the correct name' do
+    expect(house.name).to eql('Lannister')
+  end
+
+  it 'should have no members' do
+    expect(house.members).to eql([])
+  end
+end
+
+
 RSpec.describe House, '#add_member' do
   subject(:house) do
     House.new('Lannister')
