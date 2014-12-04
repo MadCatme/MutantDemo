@@ -24,7 +24,7 @@ class House
   #
   # @param [Member] member
   #
-  # @return [Family]
+  # @return [House]
   #
   def add_member(member)
     @members.push(member)
