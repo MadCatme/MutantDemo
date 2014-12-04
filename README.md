@@ -14,9 +14,9 @@ Just run `bundle install` and you're done.
 
 Checkout the master branch and run `bundle exec rspec spec` in your terminal.
 
-All specs passed and 100% code coverage? Awesome! THE END.
+All specs passed and 100% line coverage? Awesome! THE END.
 
-Well, not really. Code coverage mains nothing.
+Well, not really. Code coverage means nothing.
 
 ### Step 2
 
